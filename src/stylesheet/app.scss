@@ -1,0 +1,103 @@
+// CONFIG
+@import "config/variables";
+@import "config/mixin";
+// RESET
+@import "reset/normalize";
+@import "reset/formalize";
+// HELPER
+@import "helper/typography";
+@import "helper/global";
+@import "helper/utility";
+@import "helper/form";
+
+body {
+  background-color: $primary-background
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding: 10px 0;
+  border-bottom: $border solid $primary-color;
+
+  nav {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+
+    .logo {
+      font-weight: bolder;
+    }
+
+    a {
+      font-size: 24px;
+      color: $primary-color;
+
+    }
+
+    div {
+      margin-left: auto;
+    }
+  }
+}
+
+
+.form {
+  width: 40%;
+  margin: 40px auto;
+
+  &-title {
+    margin: 10px 0;
+    color: $primary-color;
+  }
+
+  &-section {
+    margin: 15px 0;
+  }
+
+  &-muti {
+    display: flex;
+    flex-direction: row;
+
+    div {
+      padding: 7px;
+
+    }
+  }
+}
+
+.card {
+  border-radius: $border-radius;
+  background: $secondary-background;
+  padding: 15px;
+
+
+}
+
+input,
+textarea {
+  display: block;
+  padding: 10px;
+  border-radius: $border-radius;
+  border: $border solid $primary-color;
+  margin: 5px 0;
+  width: 100%;
+}
+
+button,
+.btn {
+  padding: 5px $border-radius;
+  background: $primary-color;
+  color: white;
+  border-radius: $border-radius;
+  border: $border solid $primary-color;
+
+  &:hover {
+    background: white;
+    color: $primary-color;
+    cursor: pointer;
+  }
+}
